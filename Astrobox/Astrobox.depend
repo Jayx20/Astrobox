@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1548128988 source:c:\users\jordan\desktop\astrobox development\astrobox\src\main.cpp
+1548131318 source:c:\users\jordan\desktop\astrobox development\astrobox\src\main.cpp
 	<SFML/Window.hpp>
 	<SFML/Graphics.hpp>
 	<SFML/Main.hpp>
 	<SFML/System.hpp>
+	"player.h"
 
 1525812018 c:\users\jordan\desktop\astrobox development\astrobox\include\sfml\window.hpp
 	<SFML/System.hpp>
@@ -416,4 +417,9 @@
 
 1525812018 c:\users\jordan\desktop\astrobox development\astrobox\include\sfml\main.hpp
 	<SFML/Config.hpp>
+
+1548130975 source:c:\users\jordan\desktop\astrobox development\astrobox\src\player.cpp
+	"player.h"
+
+1548130578 c:\users\jordan\desktop\astrobox development\astrobox\src\player.h
 
