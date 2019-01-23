@@ -11,5 +11,7 @@ class entity : public sf::Sprite {
 
 	private:
 
+        float speed; //for use later
+        float direction; //when i add physics
 
 };

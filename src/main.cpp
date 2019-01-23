@@ -2,6 +2,9 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Main.hpp>
 #include <SFML/System.hpp>
+#include <vector>
+#include <memory>
+
 
 #include "player.hpp"
 #include "entity.hpp"
@@ -43,15 +46,28 @@ sf::Texture SPRITE_SHEET;
 //this is the sprite sheet that acts like a global variable so all the entities can access it by reference without
 //me having to pass it through every single construction of every entity because i find that annoying
 
+//array for all the entities
+//later i might have to break it into many arrays in like a grid for better performance
+//like how minecraft has chunks, but maybe more in depth
+std::vector<std::shared_ptr<entity>> allEntities;
+
 int main()
 {
     window.setFramerateLimit(60); //i think you know what this does
     SPRITE_SHEET.loadFromFile("../sprites/spritesheet.png"); //loads the sprite sheet into SPRITE_SHEET
 
-    player testEntity; //creates a test entity
-    testEntity.setPosition(400.f,300.f);
 
+    //player testEntity; //creates a test entity
+    //testEntity.setPosition(400.f,300.f);
 
+    allEntities.push_back(std::shared_ptr<entity>(new player()));
+    allEntities[0]->setPosition(510,270);
+    //adding new entities for testing purposes
+    for (int i=0;i<5;i++)
+    {
+        allEntities.push_back(std::shared_ptr<entity>(new entity()));
+        allEntities[i+1]->setPosition(0+i*50,0+i*50);
+    }
 
 
 
@@ -82,9 +98,9 @@ int main()
 
         FrameCounter(); //test frame counting stuff
 
-        //i deleted the MainRender function because right now its easier to do it right here
-
-        window.draw(testEntity); //temporary, later will just draw an array of all the entity in the scene
+        for (std::shared_ptr<entity> e : allEntities) {
+            window.draw(*e);
+        }
         window.display(); //updates the whole window
 
 		////this is where the main loop ends
