@@ -5,4 +5,5 @@
 class player : public entity {
 	public:
 	    player();
+	    void update();
 };

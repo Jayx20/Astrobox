@@ -8,10 +8,15 @@ class entity : public sf::Sprite {
 	public:
 
         entity();
+        entity(float speedI, float directionI);
 
-	private:
+        virtual void update();
+        void setVelocity(float speedNew, float directionNew);
 
-        float speed; //for use later
-        float direction; //when i add physics
+	protected:
 
+        void movement();
+
+        float speed;
+        float direction;
 };
