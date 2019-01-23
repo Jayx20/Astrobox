@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
-1548131318 source:c:\users\jordan\desktop\astrobox development\astrobox\src\main.cpp
+1548205076 source:c:\users\jordan\desktop\astrobox development\astrobox\src\main.cpp
 	<SFML/Window.hpp>
 	<SFML/Graphics.hpp>
 	<SFML/Main.hpp>
 	<SFML/System.hpp>
-	"player.h"
+	"player.hpp"
+	"entity.hpp"
 
 1525812018 c:\users\jordan\desktop\astrobox development\astrobox\include\sfml\window.hpp
 	<SFML/System.hpp>
@@ -418,8 +419,21 @@
 1525812018 c:\users\jordan\desktop\astrobox development\astrobox\include\sfml\main.hpp
 	<SFML/Config.hpp>
 
-1548130975 source:c:\users\jordan\desktop\astrobox development\astrobox\src\player.cpp
-	"player.h"
+1548204581 source:c:\users\jordan\desktop\astrobox development\astrobox\src\player.cpp
+	"player.hpp"
 
-1548130578 c:\users\jordan\desktop\astrobox development\astrobox\src\player.h
+1548196884 c:\users\jordan\desktop\astrobox development\astrobox\src\player.h
+	"entity.h"
+
+1548198344 c:\users\jordan\desktop\astrobox development\astrobox\src\entity.h
+	<SFML/Graphics.hpp>
+
+1548205114 source:c:\users\jordan\desktop\astrobox development\astrobox\src\entity.cpp
+	"entity.hpp"
+
+1548204703 c:\users\jordan\desktop\astrobox development\astrobox\src\entity.hpp
+	<SFML/Graphics.hpp>
+
+1548205097 c:\users\jordan\desktop\astrobox development\astrobox\src\player.hpp
+	"entity.hpp"
 

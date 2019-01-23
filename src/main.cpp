@@ -3,12 +3,14 @@
 #include <SFML/Main.hpp>
 #include <SFML/System.hpp>
 
-#include "player.h"
+#include "player.hpp"
+#include "entity.hpp"
+
 
 
 
 //this is the creation of our game window.
-sf::RenderWindow window(sf::VideoMode(800, 600), "Astrobox");
+sf::RenderWindow window(sf::VideoMode(960, 540), "Astrobox");
 
 //stuff for the frame counting thing
 int frames;
@@ -36,15 +38,22 @@ void FrameCounter() {
         //atm the framerate keeps displaying as 62 idk why but its not a big deal we can work with 2 extra frames lol
 }
 
-void MainRender() {
-        //window.draw(shape); //draws our test shape
-        window.display(); //updates the whole window
-}
 
+sf::Texture SPRITE_SHEET;
+//this is the sprite sheet that acts like a global variable so all the entities can access it by reference without
+//me having to pass it through every single construction of every entity because i find that annoying
 
 int main()
 {
-    window.setFramerateLimit(60);
+    window.setFramerateLimit(60); //i think you know what this does
+    SPRITE_SHEET.loadFromFile("../sprites/spritesheet.png"); //loads the sprite sheet into SPRITE_SHEET
+
+    player testEntity; //creates a test entity
+    testEntity.setPosition(400.f,300.f);
+
+
+
+
 
     // this is our main loop that runs the entire time our game is running
     while (window.isOpen())
@@ -66,13 +75,17 @@ int main()
 		////here is the actual game code:
 
 
+
         //yeah i haven't added much game code yet but this is where it would be
 
 
 
         FrameCounter(); //test frame counting stuff
 
-        MainRender(); //my main rendering function, everything graphical happens in here
+        //i deleted the MainRender function because right now its easier to do it right here
+
+        window.draw(testEntity); //temporary, later will just draw an array of all the entity in the scene
+        window.display(); //updates the whole window
 
 		////this is where the main loop ends
 		//
