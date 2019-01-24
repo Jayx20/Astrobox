@@ -49,6 +49,8 @@
 		<Unit filename="../src/main.cpp" />
 		<Unit filename="../src/player.cpp" />
 		<Unit filename="../src/player.hpp" />
+		<Unit filename="../src/vector2.cpp" />
+		<Unit filename="../src/vector2.hpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

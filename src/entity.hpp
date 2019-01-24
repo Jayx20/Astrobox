@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include "vector2.hpp"
 
 extern sf::Texture SPRITE_SHEET;
 
@@ -8,15 +9,19 @@ class entity : public sf::Sprite {
 	public:
 
         entity();
-        entity(float speedI, float directionI);
+        entity(VECTOR2 velocityI);
 
         virtual void update();
-        void setVelocity(float speedNew, float directionNew);
+        void setVelocity(VECTOR2 velocityN);
+        void addForce (VECTOR2 force);
 
 	protected:
 
         void movement();
 
-        float speed;
-        float direction;
+        VECTOR2 velocity;
+        float mass;
+        //float speed;
+        //float direction;
+
 };

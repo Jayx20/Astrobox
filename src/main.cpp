@@ -67,7 +67,7 @@ int main()
     {
         allEntities.push_back(std::shared_ptr<entity>(new entity()));
         allEntities[i+1]->setPosition(300+i*50,0+i*50);
-        allEntities[i+1]->setVelocity(i/2.f,90);
+        allEntities[i+1]->setVelocity(VECTOR2(i,1));
     }
 
 
