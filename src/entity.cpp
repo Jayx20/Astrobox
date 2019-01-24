@@ -5,18 +5,18 @@ const double pi = 3.14159265358979323846;
 
 entity::entity() {
     ///loads the generic texture sprite sheet
-    entity::setTexture(SPRITE_SHEET);
+    setTexture(SPRITE_SHEET);
     ///sets the generic missing texture values so any new entities without textures are drawn
-    entity::setTextureRect(sf::IntRect(0,0,32,32));
-    entity::setOrigin(getTextureRect().width/2,getTextureRect().height/2);
+    setTextureRect(sf::IntRect(0,0,32,32));
+    setOrigin(getTextureRect().width/2,getTextureRect().height/2);
 }
 
 entity::entity(VECTOR2 velocityI) {
     ///loads the generic texture sprite sheet
-    entity::setTexture(SPRITE_SHEET);
+    setTexture(SPRITE_SHEET);
     ///sets the generic missing texture values so any new entities without textures are drawn
-    entity::setTextureRect(sf::IntRect(0,0,32,32));
-    entity::setOrigin(getTextureRect().width/2,getTextureRect().height/2);
+    setTextureRect(sf::IntRect(0,0,32,32));
+    setOrigin(getTextureRect().width/2,getTextureRect().height/2);
     velocity = velocityI;
 }
 

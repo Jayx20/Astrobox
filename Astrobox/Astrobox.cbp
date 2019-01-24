@@ -44,6 +44,8 @@
 			<Add library="../lib/SFML/libfreetype.a" />
 			<Add directory="../lib" />
 		</Linker>
+		<Unit filename="../src/asteroid.cpp" />
+		<Unit filename="../src/asteroid.hpp" />
 		<Unit filename="../src/entity.cpp" />
 		<Unit filename="../src/entity.hpp" />
 		<Unit filename="../src/main.cpp" />

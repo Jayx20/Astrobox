@@ -8,6 +8,8 @@
 
 #include "player.hpp"
 #include "entity.hpp"
+#include "asteroid.hpp"
+
 
 
 
@@ -65,7 +67,7 @@ int main()
     ///adding new entities for testing purposes
     for (int i=0;i<5;i++)
     {
-        allEntities.push_back(std::shared_ptr<entity>(new entity()));
+        allEntities.push_back(std::shared_ptr<entity>(new asteroid()));
         allEntities[i+1]->setPosition(300+i*50,0+i*50);
         allEntities[i+1]->setVelocity(VECTOR2(i,1));
     }
@@ -93,16 +95,17 @@ int main()
 
 
 
-        //yeah i haven't added much game code yet but this is where it would be
+		///goes through every single entity and runs updates
+        for (std::shared_ptr<entity> e : allEntities) {
+            e->update();
+            window.draw(*e);
 
+        }
 
 
         FrameCounter(); //test frame counting stuff
 
-        for (std::shared_ptr<entity> e : allEntities) {
-            window.draw(*e);
-            e->update();
-        }
+
         window.display(); ///updates the whole window
 
 		///this is where the main loop ends
