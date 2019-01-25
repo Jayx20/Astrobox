@@ -27,7 +27,7 @@ class entity : public sf::Sprite {
         void movement();
 
         VECTOR2 velocity;
-        float mass;
+        float mass = 1.0f;
 
 
         bool checkColliding(entity &target);

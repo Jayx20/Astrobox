@@ -15,7 +15,7 @@
 
 
 ///this is the creation of our game window.
-sf::RenderWindow window(sf::VideoMode(960, 540), "Astrobox");
+sf::RenderWindow window(sf::VideoMode(1920, 1080), "Astrobox");
 
 ///stuff for the FrameCounter function
 int frames;
@@ -65,11 +65,11 @@ int main()
     allEntities.push_back(std::shared_ptr<entity>(new player()));
     allEntities[0]->setPosition(510,270);
     ///adding new entities for testing purposes
-    for (int i=0;i<5;i++)
+    for (int i=0;i<10;i++)
     {
         allEntities.push_back(std::shared_ptr<entity>(new asteroid()));
         allEntities[i+1]->setPosition(300+i*50,0+i*50);
-        allEntities[i+1]->setVelocity(VECTOR2(i,1));
+        allEntities[i+1]->setVelocity(VECTOR2(0,0));
     }
 
 

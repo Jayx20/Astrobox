@@ -27,8 +27,6 @@ void entity::update() {
 }
 
 void entity::movement() {
-    //setRotation(direction+90); ///sets the rotation of the entity to its direction variable
-    //move(cos(direction*(pi/180))*speed,sin(direction*(pi/180))*speed);
     move(velocity.sf());
     ///moves the entity
 }
@@ -44,22 +42,26 @@ void entity::setVelocity(VECTOR2 velocityN) {
 void entity::collisionsUpdate(std::vector<std::shared_ptr<entity>> &targets) {
     for (std::shared_ptr<entity> target : targets) {
         if(target.get() != this && !target->noclip && checkColliding(*target) ) {
-            printf("colliding!!");
-        }
-    }
-}
+
+            //totally not copied off the internet (i do not math brain)
+            VECTOR2 n((getPosition().x-target->getPosition().x),(getPosition().y-target->getPosition().y));
+            n = n.norm();
+
+            float a1 = velocity.dot(n);
+            float a2 = target->velocity.dot(n);
+
+            float optimizedP = (2.0 * (a1 - a2)) / (mass + target->mass);
+
+            VECTOR2 newVelocityA = velocity - (n*(optimizedP * target->mass));
+            VECTOR2 newVelocityB = target->velocity + (n*(optimizedP * mass));
+
+            setVelocity(newVelocityA);
+            target->setVelocity(newVelocityB);
+
+}   }   }
 
 bool entity::checkColliding(entity &target) {
     bool colliding;
-    //printf("testing!!");
-    //colliding = (pow((radius+target.radius),2) > ( (getPosition().x-target.getPosition().x) + (getPosition().y-target.getPosition().y) ));
-
-
-    //float radiis = pow((radius+target.radius),2);
-    //float distance = ( pow((getPosition().x-target.getPosition().x),2) + pow((getPosition().y-target.getPosition().y),2) );
-
-    //printf("Radiis: %f, Distance %f\n",radiis,distance);
     colliding = (pow((radius+target.radius),2)) > ( pow((getPosition().x-target.getPosition().x),2) + pow((getPosition().y-target.getPosition().y),2) );
-
     return colliding;
 }
