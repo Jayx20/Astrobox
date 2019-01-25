@@ -6,7 +6,8 @@ class asteroid : public entity {
 	public:
 		asteroid();
         asteroid(VECTOR2 velocityI);
-		void update();
+
+		//void update() {movement();}
 
 };
 

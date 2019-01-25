@@ -2,9 +2,12 @@
 
 asteroid::asteroid() {
     setTextureRect(sf::IntRect(32,96,32,32));
+    radius = 14;
 }
 
 asteroid::asteroid(VECTOR2 velocityI) {
     setTextureRect(sf::IntRect(32,96,32,32));
+    radius = 14;
     velocity = velocityI;
 }
+

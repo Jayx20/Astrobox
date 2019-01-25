@@ -9,6 +9,7 @@ entity::entity() {
     ///sets the generic missing texture values so any new entities without textures are drawn
     setTextureRect(sf::IntRect(0,0,32,32));
     setOrigin(getTextureRect().width/2,getTextureRect().height/2);
+    radius = 16;
 }
 
 entity::entity(VECTOR2 velocityI) {
@@ -17,6 +18,7 @@ entity::entity(VECTOR2 velocityI) {
     ///sets the generic missing texture values so any new entities without textures are drawn
     setTextureRect(sf::IntRect(0,0,32,32));
     setOrigin(getTextureRect().width/2,getTextureRect().height/2);
+    radius = 16;
     velocity = velocityI;
 }
 
@@ -37,4 +39,27 @@ void entity::addForce (VECTOR2 force) {
 
 void entity::setVelocity(VECTOR2 velocityN) {
     velocity = velocityN;
+}
+
+void entity::collisionsUpdate(std::vector<std::shared_ptr<entity>> &targets) {
+    for (std::shared_ptr<entity> target : targets) {
+        if(target.get() != this && !target->noclip && checkColliding(*target) ) {
+            printf("colliding!!");
+        }
+    }
+}
+
+bool entity::checkColliding(entity &target) {
+    bool colliding;
+    //printf("testing!!");
+    //colliding = (pow((radius+target.radius),2) > ( (getPosition().x-target.getPosition().x) + (getPosition().y-target.getPosition().y) ));
+
+
+    //float radiis = pow((radius+target.radius),2);
+    //float distance = ( pow((getPosition().x-target.getPosition().x),2) + pow((getPosition().y-target.getPosition().y),2) );
+
+    //printf("Radiis: %f, Distance %f\n",radiis,distance);
+    colliding = (pow((radius+target.radius),2)) > ( pow((getPosition().x-target.getPosition().x),2) + pow((getPosition().y-target.getPosition().y),2) );
+
+    return colliding;
 }

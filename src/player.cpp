@@ -3,6 +3,7 @@
 player::player() {
     ///sets the player sprite to something other than the missing texture sprite
     setTextureRect(sf::IntRect(32,0,32,32));
+    radius = 15;
 }
 
 void player::update() {
@@ -16,6 +17,8 @@ void player::update() {
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && velocity.mag()!=0) {velocity=(velocity.norm())*(velocity.mag()-0.2);}
 
     if(velocity.mag() < 0.1) {velocity=VECTOR2(0,0);}
+
+
 
     //printf("%f",velocity.mag());
 }

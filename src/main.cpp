@@ -99,7 +99,7 @@ int main()
         for (std::shared_ptr<entity> e : allEntities) {
             e->update();
             window.draw(*e);
-
+            if (!e->noclip) {e->collisionsUpdate(allEntities);}
         }
 
 

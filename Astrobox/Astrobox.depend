@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1548286773 source:c:\users\jordan\desktop\astrobox development\astrobox\src\main.cpp
+1548373095 source:c:\users\jordan\desktop\astrobox development\astrobox\src\main.cpp
 	<SFML/Window.hpp>
 	<SFML/Graphics.hpp>
 	<SFML/Main.hpp>
@@ -8,6 +8,7 @@
 	<memory>
 	"player.hpp"
 	"entity.hpp"
+	"asteroid.hpp"
 
 1525812018 c:\users\jordan\desktop\astrobox development\astrobox\include\sfml\window.hpp
 	<SFML/System.hpp>
@@ -421,7 +422,7 @@
 1525812018 c:\users\jordan\desktop\astrobox development\astrobox\include\sfml\main.hpp
 	<SFML/Config.hpp>
 
-1548303079 source:c:\users\jordan\desktop\astrobox development\astrobox\src\player.cpp
+1548373220 source:c:\users\jordan\desktop\astrobox development\astrobox\src\player.cpp
 	"player.hpp"
 
 1548196884 c:\users\jordan\desktop\astrobox development\astrobox\src\player.h
@@ -430,15 +431,17 @@
 1548198344 c:\users\jordan\desktop\astrobox development\astrobox\src\entity.h
 	<SFML/Graphics.hpp>
 
-1548286773 source:c:\users\jordan\desktop\astrobox development\astrobox\src\entity.cpp
+1548373438 source:c:\users\jordan\desktop\astrobox development\astrobox\src\entity.cpp
 	"entity.hpp"
 	<cmath>
 
-1548286508 c:\users\jordan\desktop\astrobox development\astrobox\src\entity.hpp
+1548373476 c:\users\jordan\desktop\astrobox development\astrobox\src\entity.hpp
 	<SFML/Graphics.hpp>
 	"vector2.hpp"
+	<vector>
+	<memory>
 
-1548219533 c:\users\jordan\desktop\astrobox development\astrobox\src\player.hpp
+1548368931 c:\users\jordan\desktop\astrobox development\astrobox\src\player.hpp
 	"entity.hpp"
 
 1548286720 c:\users\jordan\desktop\astrobox development\astrobox\src\vector2.hpp
@@ -886,5 +889,11 @@
 	"asteroid.hpp"
 
 1548347832 c:\users\thanos\desktop\astrobox\src\asteroid.hpp
+	"entity.hpp"
+
+1548373229 source:c:\users\jordan\desktop\astrobox development\astrobox\src\asteroid.cpp
+	"asteroid.hpp"
+
+1548368935 c:\users\jordan\desktop\astrobox development\astrobox\src\asteroid.hpp
 	"entity.hpp"
 
