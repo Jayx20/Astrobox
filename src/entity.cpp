@@ -58,6 +58,9 @@ void entity::collisionsUpdate(std::vector<std::shared_ptr<entity>> &targets) {
             setVelocity(newVelocityA);
             target->setVelocity(newVelocityB);
 
+            if(newVelocityA.mag() == 0 && newVelocityB.mag() == 0) {setVelocity(VECTOR2(5,5)); target->setVelocity(VECTOR2(-5,-5)); }
+
+
 }   }   }
 
 bool entity::checkColliding(entity &target) {

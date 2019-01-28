@@ -1,0 +1,3 @@
+//#include "../src/resource.hpp"
+
+IMG_SPRITES RCDATA "spritesheet.png"

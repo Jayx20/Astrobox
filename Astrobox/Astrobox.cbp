@@ -30,6 +30,9 @@
 			<Add option="-DSFML_STATIC" />
 			<Add directory="../include" />
 		</Compiler>
+		<ResourceCompiler>
+			<Add directory="../assets" />
+		</ResourceCompiler>
 		<Linker>
 			<Add option="-static-libstdc++" />
 			<Add option="-static-libgcc" />
@@ -44,13 +47,17 @@
 			<Add library="../lib/SFML/libfreetype.a" />
 			<Add directory="../lib" />
 		</Linker>
+		<Unit filename="../main.cpp" />
 		<Unit filename="../src/asteroid.cpp" />
 		<Unit filename="../src/asteroid.hpp" />
 		<Unit filename="../src/entity.cpp" />
 		<Unit filename="../src/entity.hpp" />
-		<Unit filename="../src/main.cpp" />
 		<Unit filename="../src/player.cpp" />
 		<Unit filename="../src/player.hpp" />
+		<Unit filename="../src/resource.hpp" />
+		<Unit filename="../src/resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
 		<Unit filename="../src/vector2.cpp" />
 		<Unit filename="../src/vector2.hpp" />
 		<Extensions>

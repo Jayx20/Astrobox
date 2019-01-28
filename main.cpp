@@ -6,11 +6,10 @@
 #include <memory>
 
 
-#include "player.hpp"
-#include "entity.hpp"
-#include "asteroid.hpp"
-
-
+#include "src/player.hpp"
+#include "src/entity.hpp"
+#include "src/asteroid.hpp"
+#include "src/resource.hpp"
 
 
 
@@ -22,6 +21,8 @@ int frames;
 sf::Clock frameTimer;
 int secondsPassed;
 
+///global booleans to spawn objects
+bool spawningAsteroid;
 
     ///functions to be used in the main game loop
 
@@ -56,7 +57,7 @@ std::vector<std::shared_ptr<entity>> allEntities;
 int main()
 {
     window.setFramerateLimit(60); //i think you know what this does
-    SPRITE_SHEET.loadFromFile("../sprites/spritesheet.png"); ///loads the sprite sheet into SPRITE_SHEET
+    SPRITE_SHEET.loadFromImage(LoadImageFromResource("IMG_SPRITES"));  ///loads the sprite sheet into SPRITE_SHEET
 
 
     ///player testEntity; //creates a test entity
@@ -64,12 +65,13 @@ int main()
 
     allEntities.push_back(std::shared_ptr<entity>(new player()));
     allEntities[0]->setPosition(510,270);
+
     ///adding new entities for testing purposes
-    for (int i=0;i<10;i++)
+    for (int i=0;i<11;i++)
     {
-        allEntities.push_back(std::shared_ptr<entity>(new asteroid()));
-        allEntities[i+1]->setPosition(300+i*50,0+i*50);
-        allEntities[i+1]->setVelocity(VECTOR2(0,0));
+        allEntities.push_back(std::shared_ptr<entity>(new asteroid(300+i*50.f,0+i*50.f)));
+        //allEntities[i+1]->setPosition(300+i*50,0+i*50);
+        //allEntities[i+1]->setVelocity(VECTOR2(0,0));
     }
 
 
@@ -101,6 +103,9 @@ int main()
             window.draw(*e);
             if (!e->noclip) {e->collisionsUpdate(allEntities);}
         }
+        if(spawningAsteroid) {
+        allEntities.push_back(std::shared_ptr<entity>(new asteroid(allEntities[0]->getPosition().x,allEntities[0]->getPosition().y-50)));
+        spawningAsteroid=false;}
 
 
         FrameCounter(); //test frame counting stuff

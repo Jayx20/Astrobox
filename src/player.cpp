@@ -1,4 +1,6 @@
 #include "player.hpp"
+#include "asteroid.hpp"
+extern bool spawningAsteroid;
 
 player::player() {
     ///sets the player sprite to something other than the missing texture sprite
@@ -19,6 +21,9 @@ void player::update() {
     if(velocity.mag() < 0.1) {velocity=VECTOR2(0,0);}
 
 
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+        if(!aPressed) {aPressed=true; spawningAsteroid = true; }
+    } else {aPressed=false;}
 
     //printf("%f",velocity.mag());
 }
