@@ -432,11 +432,11 @@
 1548198344 c:\users\jordan\desktop\astrobox development\astrobox\src\entity.h
 	<SFML/Graphics.hpp>
 
-1548652685 source:c:\users\jordan\desktop\astrobox development\astrobox\src\entity.cpp
+1548723110 source:c:\users\jordan\desktop\astrobox development\astrobox\src\entity.cpp
 	"entity.hpp"
 	<cmath>
 
-1548387066 c:\users\jordan\desktop\astrobox development\astrobox\src\entity.hpp
+1548721043 c:\users\jordan\desktop\astrobox development\astrobox\src\entity.hpp
 	<SFML/Graphics.hpp>
 	"vector2.hpp"
 	<vector>
@@ -898,7 +898,7 @@
 1548648314 c:\users\jordan\desktop\astrobox development\astrobox\src\asteroid.hpp
 	"entity.hpp"
 
-1548652691 source:c:\users\jordan\desktop\astrobox development\astrobox\main.cpp
+1548722687 source:c:\users\jordan\desktop\astrobox development\astrobox\main.cpp
 	<SFML/Window.hpp>
 	<SFML/Graphics.hpp>
 	<SFML/Main.hpp>

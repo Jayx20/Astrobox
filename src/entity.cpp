@@ -47,6 +47,12 @@ void entity::collisionsUpdate(std::vector<std::shared_ptr<entity>> &targets) {
             VECTOR2 n((getPosition().x-target->getPosition().x),(getPosition().y-target->getPosition().y));
             n = n.norm();
 
+            float offset = sqrt(( pow((getPosition().x-target->getPosition().x),2) + pow((getPosition().y-target->getPosition().y),2) ))-(radius+target->radius);
+
+            setPosition(getPosition()-(n*offset).sf());
+            target->setPosition(target->getPosition()+(n*offset).sf());
+
+
             float a1 = velocity.dot(n);
             float a2 = target->velocity.dot(n);
 
@@ -58,7 +64,8 @@ void entity::collisionsUpdate(std::vector<std::shared_ptr<entity>> &targets) {
             setVelocity(newVelocityA);
             target->setVelocity(newVelocityB);
 
-            if(newVelocityA.mag() == 0 && newVelocityB.mag() == 0) {setVelocity(VECTOR2(5,5)); target->setVelocity(VECTOR2(-5,-5)); }
+            //if(newVelocityA.mag() == 0 && newVelocityB.mag() == 0) {setVelocity(VECTOR2(5,5)); target->setVelocity(VECTOR2(-5,-5));}
+
 
 
 }   }   }

@@ -21,13 +21,13 @@ class entity : public sf::Sprite {
 
         bool noclip = false;
         float radius;
+        float mass = 1.0f;
 
 	protected:
 
         void movement();
 
         VECTOR2 velocity;
-        float mass = 1.0f;
 
 
         bool checkColliding(entity &target);

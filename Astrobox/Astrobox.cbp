@@ -47,6 +47,9 @@
 			<Add library="../lib/SFML/libfreetype.a" />
 			<Add directory="../lib" />
 		</Linker>
+		<Unit filename="../assets/resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
 		<Unit filename="../main.cpp" />
 		<Unit filename="../src/asteroid.cpp" />
 		<Unit filename="../src/asteroid.hpp" />
@@ -55,9 +58,6 @@
 		<Unit filename="../src/player.cpp" />
 		<Unit filename="../src/player.hpp" />
 		<Unit filename="../src/resource.hpp" />
-		<Unit filename="../src/resource.rc">
-			<Option compilerVar="WINDRES" />
-		</Unit>
 		<Unit filename="../src/vector2.cpp" />
 		<Unit filename="../src/vector2.hpp" />
 		<Extensions>

@@ -73,7 +73,8 @@ int main()
         //allEntities[i+1]->setPosition(300+i*50,0+i*50);
         //allEntities[i+1]->setVelocity(VECTOR2(0,0));
     }
-
+    allEntities[10]->mass=10.f;
+    allEntities[10]->setTextureRect(sf::IntRect(0,96,32,32));
 
 
     /// this is our main loop that runs the entire time our game is running
