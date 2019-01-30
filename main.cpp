@@ -21,8 +21,14 @@ int frames;
 sf::Clock frameTimer;
 int secondsPassed;
 
-///global booleans to spawn objects
+///global variables to use along with player
 bool spawningAsteroid;
+bool guiOn;
+float asteroidMass = 1.f;
+
+///gui stuff
+sf::Font freesans;
+
 
     ///functions to be used in the main game loop
 
@@ -60,6 +66,10 @@ int main()
     SPRITE_SHEET.loadFromImage(LoadImageFromResource("IMG_SPRITES"));  ///loads the sprite sheet into SPRITE_SHEET
 
 
+    freesans.loadFromFile("FreeSans.ttf");
+    sf::Text asteroidMassText("uninitialized",freesans,30);
+
+    asteroidMassText.setPosition(100,100);
     ///player testEntity; //creates a test entity
     ///testEntity.setPosition(400.f,300.f);
 
@@ -69,12 +79,10 @@ int main()
     ///adding new entities for testing purposes
     for (int i=0;i<11;i++)
     {
-        allEntities.push_back(std::shared_ptr<entity>(new asteroid(300+i*50.f,0+i*50.f)));
+        allEntities.push_back(std::shared_ptr<entity>(new asteroid(300+i*50.f,0+i*50.f,i*0.5)));
         //allEntities[i+1]->setPosition(300+i*50,0+i*50);
         //allEntities[i+1]->setVelocity(VECTOR2(0,0));
     }
-    allEntities[10]->mass=10.f;
-    allEntities[10]->setTextureRect(sf::IntRect(0,96,32,32));
 
 
     /// this is our main loop that runs the entire time our game is running
@@ -105,12 +113,15 @@ int main()
             if (!e->noclip) {e->collisionsUpdate(allEntities);}
         }
         if(spawningAsteroid) {
-        allEntities.push_back(std::shared_ptr<entity>(new asteroid(allEntities[0]->getPosition().x,allEntities[0]->getPosition().y-50)));
+        allEntities.push_back(std::shared_ptr<entity>(new asteroid(allEntities[0]->getPosition().x,allEntities[0]->getPosition().y-50,asteroidMass)));
         spawningAsteroid=false;}
 
 
         FrameCounter(); //test frame counting stuff
 
+        if(guiOn) {
+            window.draw(asteroidMassText);
+            }
 
         window.display(); ///updates the whole window
 

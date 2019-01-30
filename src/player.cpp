@@ -1,6 +1,11 @@
 #include "player.hpp"
 #include "asteroid.hpp"
+#include "iterator"
+
 extern bool spawningAsteroid;
+extern bool guiOn;
+extern float asteroidMass;
+
 
 player::player() {
     ///sets the player sprite to something other than the missing texture sprite
@@ -15,15 +20,33 @@ void player::update() {
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {addForce(VECTOR2(-0.1,0));}
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {addForce(VECTOR2(0.1,0));}
 
-    //printf("%f",velocity.x,velocity.y);
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && velocity.mag()!=0) {velocity=(velocity.norm())*(velocity.mag()-0.2);}
+
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::LBracket)) {asteroidMass-=0.1f;}
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::RBracket)) {asteroidMass+=0.1f;}
+
+
+    keyboardUpdate();
 
     if(velocity.mag() < 0.1) {velocity=VECTOR2(0,0);}
 
+}
 
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-        if(!aPressed) {aPressed=true; spawningAsteroid = true; }
-    } else {aPressed=false;}
+void player::keyboardUpdate() {
+    //printf("Bruh:%d\n", (sf::Keyboard::isKeyPressed(keyList[2])));
+    for(int k=0;k< 4 ;k++) {
 
-    //printf("%f",velocity.mag());
+        if(sf::Keyboard::isKeyPressed(keyList[k])) {
+            if(!keyStates[k]) {keyStates[k]=true;
+                switch (k) {
+                    case 0: spawningAsteroid=true; break; //A
+                    case 1:  guiOn=!guiOn; break; //O
+                    case 2:  break; //[
+                    case 3:  break; //]
+
+                }
+            }
+        } else {keyStates[k]=false;}
+
+    }
 }

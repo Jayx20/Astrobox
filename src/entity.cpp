@@ -47,7 +47,10 @@ void entity::collisionsUpdate(std::vector<std::shared_ptr<entity>> &targets) {
             VECTOR2 n((getPosition().x-target->getPosition().x),(getPosition().y-target->getPosition().y));
             n = n.norm();
 
-            float offset = sqrt(( pow((getPosition().x-target->getPosition().x),2) + pow((getPosition().y-target->getPosition().y),2) ))-(radius+target->radius);
+            float offset = (sqrt(( pow((getPosition().x-target->getPosition().x),2) +
+                                   pow((getPosition().y-target->getPosition().y),2) ))
+                            -(radius+target->radius))*0.51;
+
 
             setPosition(getPosition()-(n*offset).sf());
             target->setPosition(target->getPosition()+(n*offset).sf());

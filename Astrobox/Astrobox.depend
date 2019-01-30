@@ -422,9 +422,10 @@
 1525812018 c:\users\jordan\desktop\astrobox development\astrobox\include\sfml\main.hpp
 	<SFML/Config.hpp>
 
-1548652726 source:c:\users\jordan\desktop\astrobox development\astrobox\src\player.cpp
+1548813844 source:c:\users\jordan\desktop\astrobox development\astrobox\src\player.cpp
 	"player.hpp"
 	"asteroid.hpp"
+	"iterator"
 
 1548196884 c:\users\jordan\desktop\astrobox development\astrobox\src\player.h
 	"entity.h"
@@ -432,7 +433,7 @@
 1548198344 c:\users\jordan\desktop\astrobox development\astrobox\src\entity.h
 	<SFML/Graphics.hpp>
 
-1548723110 source:c:\users\jordan\desktop\astrobox development\astrobox\src\entity.cpp
+1548727551 source:c:\users\jordan\desktop\astrobox development\astrobox\src\entity.cpp
 	"entity.hpp"
 	<cmath>
 
@@ -442,7 +443,7 @@
 	<vector>
 	<memory>
 
-1548652538 c:\users\jordan\desktop\astrobox development\astrobox\src\player.hpp
+1548812489 c:\users\jordan\desktop\astrobox development\astrobox\src\player.hpp
 	"entity.hpp"
 
 1548286720 c:\users\jordan\desktop\astrobox development\astrobox\src\vector2.hpp
@@ -892,13 +893,14 @@
 1548347832 c:\users\thanos\desktop\astrobox\src\asteroid.hpp
 	"entity.hpp"
 
-1548648305 source:c:\users\jordan\desktop\astrobox development\astrobox\src\asteroid.cpp
+1548724434 source:c:\users\jordan\desktop\astrobox development\astrobox\src\asteroid.cpp
 	"asteroid.hpp"
+	<cmath>
 
-1548648314 c:\users\jordan\desktop\astrobox development\astrobox\src\asteroid.hpp
+1548724301 c:\users\jordan\desktop\astrobox development\astrobox\src\asteroid.hpp
 	"entity.hpp"
 
-1548722687 source:c:\users\jordan\desktop\astrobox development\astrobox\main.cpp
+1548813957 source:c:\users\jordan\desktop\astrobox development\astrobox\main.cpp
 	<SFML/Window.hpp>
 	<SFML/Graphics.hpp>
 	<SFML/Main.hpp>
@@ -914,4 +916,546 @@
 	<windows.h>
 
 1548647986 source:c:\users\jordan\desktop\astrobox development\astrobox\assets\resource.rc
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\tgui.hpp
+	<TGUI/Clipboard.hpp>
+	<TGUI/Animation.hpp>
+	<TGUI/Widget.hpp>
+	<TGUI/ToolTip.hpp>
+	<TGUI/Container.hpp>
+	<TGUI/Gui.hpp>
+	<TGUI/Loading/Deserializer.hpp>
+	<TGUI/Loading/Serializer.hpp>
+	<TGUI/Loading/Theme.hpp>
+	<TGUI/Loading/WidgetFactory.hpp>
+	<TGUI/Widgets/BitmapButton.hpp>
+	<TGUI/Widgets/Button.hpp>
+	<TGUI/Widgets/Canvas.hpp>
+	<TGUI/Widgets/ChatBox.hpp>
+	<TGUI/Widgets/CheckBox.hpp>
+	<TGUI/Widgets/ChildWindow.hpp>
+	<TGUI/Widgets/ClickableWidget.hpp>
+	<TGUI/Widgets/ComboBox.hpp>
+	<TGUI/Widgets/EditBox.hpp>
+	<TGUI/Widgets/Group.hpp>
+	<TGUI/Widgets/Grid.hpp>
+	<TGUI/Widgets/HorizontalLayout.hpp>
+	<TGUI/Widgets/HorizontalWrap.hpp>
+	<TGUI/Widgets/Knob.hpp>
+	<TGUI/Widgets/Label.hpp>
+	<TGUI/Widgets/ListBox.hpp>
+	<TGUI/Widgets/ListView.hpp>
+	<TGUI/Widgets/MenuBar.hpp>
+	<TGUI/Widgets/MessageBox.hpp>
+	<TGUI/Widgets/Panel.hpp>
+	<TGUI/Widgets/Picture.hpp>
+	<TGUI/Widgets/ProgressBar.hpp>
+	<TGUI/Widgets/RadioButton.hpp>
+	<TGUI/Widgets/RadioButtonGroup.hpp>
+	<TGUI/Widgets/RangeSlider.hpp>
+	<TGUI/Widgets/ScrollablePanel.hpp>
+	<TGUI/Widgets/Scrollbar.hpp>
+	<TGUI/Widgets/Slider.hpp>
+	<TGUI/Widgets/SpinButton.hpp>
+	<TGUI/Widgets/Tabs.hpp>
+	<TGUI/Widgets/TextBox.hpp>
+	<TGUI/Widgets/TreeView.hpp>
+	<TGUI/Widgets/VerticalLayout.hpp>
+	<TGUI/SignalImpl.hpp>
+	<SFML/Graphics.hpp>
+	<SFML/Main.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\clipboard.hpp
+	<TGUI/Config.hpp>
+	<SFML/System/String.hpp>
+	<SFML/Window/WindowHandle.hpp>
+
+1548611836 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\config.hpp
+	<SFML/Config.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\animation.hpp
+	<TGUI/Vector2f.hpp>
+	<SFML/System/Time.hpp>
+	<functional>
+	<memory>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\vector2f.hpp
+	<TGUI/Global.hpp>
+	<SFML/System/Vector2.hpp>
+	<SFML/System/Err.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\global.hpp
+	<TGUI/Config.hpp>
+	<TGUI/Exception.hpp>
+	<TGUI/Font.hpp>
+	<cstdint>
+	<string>
+	<memory>
+	<iostream>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\exception.hpp
+	<string>
+	<stdexcept>
+	<TGUI/Config.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\font.hpp
+	<TGUI/Config.hpp>
+	<SFML/Graphics/Font.hpp>
+	<cstdint>
+	<string>
+	<cstddef>
+	<memory>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widget.hpp
+	<TGUI/Global.hpp>
+	<TGUI/Signal.hpp>
+	<TGUI/Sprite.hpp>
+	<TGUI/Layout.hpp>
+	<TGUI/Vector2f.hpp>
+	<TGUI/Loading/Theme.hpp>
+	<TGUI/Loading/DataIO.hpp>
+	<TGUI/Loading/Serializer.hpp>
+	<TGUI/Loading/Deserializer.hpp>
+	<TGUI/Renderers/WidgetRenderer.hpp>
+	<TGUI/Aurora/SmartPtr/CopiedPtr.hpp>
+	<TGUI/Aurora/Tools/Downcast.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/Window/Event.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<unordered_set>
+	<any>
+	<TGUI/Any.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\signal.hpp
+	<TGUI/Global.hpp>
+	<TGUI/Vector2f.hpp>
+	<TGUI/Animation.hpp>
+	<SFML/System/String.hpp>
+	<functional>
+	<typeindex>
+	<memory>
+	<vector>
+	<deque>
+	<map>
+
+1548611836 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\sprite.hpp
+	<TGUI/Texture.hpp>
+	<TGUI/Vector2f.hpp>
+	<TGUI/FloatRect.hpp>
+	<TGUI/Color.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/Vertex.hpp>
+
+1548611836 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\texture.hpp
+	<TGUI/TextureData.hpp>
+	<TGUI/Vector2f.hpp>
+	<TGUI/Color.hpp>
+	<SFML/System/String.hpp>
+	<functional>
+
+1548611836 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\texturedata.hpp
+	<TGUI/Config.hpp>
+	<SFML/Graphics/Image.hpp>
+	<SFML/Graphics/Texture.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/Shader.hpp>
+	<memory>
+	<string>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\color.hpp
+	<TGUI/Config.hpp>
+	<SFML/Graphics/Color.hpp>
+	<cstdint>
+	<string>
+	<map>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\floatrect.hpp
+	<TGUI/Config.hpp>
+	<SFML/Graphics/Rect.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\layout.hpp
+	<TGUI/Config.hpp>
+	<TGUI/Vector2f.hpp>
+	<type_traits>
+	<functional>
+	<memory>
+	<string>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\loading\theme.hpp
+	<TGUI/Loading/ThemeLoader.hpp>
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\loading\themeloader.hpp
+	<TGUI/Config.hpp>
+	<SFML/System/String.hpp>
+	<memory>
+	<string>
+	<vector>
+	<map>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\widgetrenderer.hpp
+	<TGUI/Config.hpp>
+	<TGUI/ObjectConverter.hpp>
+	<TGUI/Loading/DataIO.hpp>
+
+1548611836 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\objectconverter.hpp
+	<TGUI/TextStyle.hpp>
+	<TGUI/Outline.hpp>
+	<TGUI/Texture.hpp>
+	<TGUI/Color.hpp>
+	<TGUI/Font.hpp>
+	<variant>
+	<TGUI/Any.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\textstyle.hpp
+	<TGUI/Config.hpp>
+	<SFML/Graphics/Text.hpp>
+	<string>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\outline.hpp
+	<TGUI/Vector2f.hpp>
+	<TGUI/AbsoluteOrRelativeValue.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\absoluteorrelativevalue.hpp
+	<TGUI/Global.hpp>
+	<TGUI/to_string.hpp>
+	<type_traits>
+	<string>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\to_string.hpp
+	<sstream>
+	<locale>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\any.hpp
+	<type_traits>
+	<utility>
+	<typeinfo>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\loading\dataio.hpp
+	<TGUI/Config.hpp>
+	<SFML/System/String.hpp>
+	<sstream>
+	<memory>
+	<vector>
+	<string>
+	<map>
+	<cstdio>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\loading\serializer.hpp
+	<TGUI/ObjectConverter.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\loading\deserializer.hpp
+	<TGUI/ObjectConverter.hpp>
+
+1533470184 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\aurora\smartptr\copiedptr.hpp
+	<TGUI/Aurora/SmartPtr/ClonersAndDeleters.hpp>
+	<TGUI/Aurora/SmartPtr/Detail/PtrOwner.hpp>
+	<TGUI/Aurora/Tools/SafeBool.hpp>
+	<TGUI/Aurora/Tools/Swap.hpp>
+	<TGUI/Aurora/Config.hpp>
+	<algorithm>
+	<type_traits>
+	<utility>
+	<TGUI/Aurora/SmartPtr/Detail/Factories.hpp>
+
+1533470184 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\aurora\smartptr\clonersanddeleters.hpp
+	<TGUI/Aurora/Meta/Templates.hpp>
+
+1533470184 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\aurora\meta\templates.hpp
+	<TGUI/Aurora/Config.hpp>
+	<type_traits>
+
+1533470183 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\aurora\config.hpp
+
+1533470184 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\aurora\smartptr\detail\ptrowner.hpp
+	<TGUI/Aurora/Tools/NonCopyable.hpp>
+	<cassert>
+	<utility>
+
+1533470184 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\aurora\tools\noncopyable.hpp
+
+1533470184 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\aurora\tools\safebool.hpp
+
+1533470184 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\aurora\tools\swap.hpp
+	<utility>
+
+1533470184 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\aurora\smartptr\detail\factories.hpp
+	<TGUI/Aurora/Meta/Preprocessor.hpp>
+
+1533470184 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\aurora\meta\preprocessor.hpp
+	<TGUI/Aurora/Config.hpp>
+
+1533470184 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\aurora\tools\downcast.hpp
+	<cassert>
+	<type_traits>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\tooltip.hpp
+	<TGUI/Config.hpp>
+	<TGUI/Vector2f.hpp>
+	<SFML/System/Time.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\container.hpp
+	<list>
+	<TGUI/Widget.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\gui.hpp
+	<TGUI/Container.hpp>
+	<SFML/Graphics/RenderWindow.hpp>
+	<queue>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\loading\widgetfactory.hpp
+	<TGUI/Widget.hpp>
+	<TGUI/Loading/DataIO.hpp>
+	<functional>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\bitmapbutton.hpp
+	<TGUI/Widgets/Button.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\button.hpp
+	<TGUI/Renderers/ButtonRenderer.hpp>
+	<TGUI/Widgets/ClickableWidget.hpp>
+	<TGUI/Text.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\buttonrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\clickablewidget.hpp
+	<TGUI/Widget.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\text.hpp
+	<TGUI/Font.hpp>
+	<TGUI/Color.hpp>
+	<TGUI/Vector2f.hpp>
+	<TGUI/TextStyle.hpp>
+	<SFML/Graphics/Text.hpp>
+	<SFML/Graphics/Transformable.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\canvas.hpp
+	<TGUI/Widgets/ClickableWidget.hpp>
+	<SFML/Graphics/RenderTexture.hpp>
+	<SFML/Graphics/Sprite.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\chatbox.hpp
+	<TGUI/CopiedSharedPtr.hpp>
+	<TGUI/Widgets/Scrollbar.hpp>
+	<TGUI/Renderers/ChatBoxRenderer.hpp>
+	<TGUI/Text.hpp>
+	<deque>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\copiedsharedptr.hpp
+	<memory>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\scrollbar.hpp
+	<TGUI/Widget.hpp>
+	<TGUI/Renderers/ScrollbarRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\scrollbarrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\chatboxrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\checkbox.hpp
+	<TGUI/Widgets/RadioButton.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\radiobutton.hpp
+	<TGUI/Renderers/RadioButtonRenderer.hpp>
+	<TGUI/Widgets/ClickableWidget.hpp>
+	<TGUI/Text.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\radiobuttonrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\childwindow.hpp
+	<TGUI/CopiedSharedPtr.hpp>
+	<TGUI/Container.hpp>
+	<TGUI/Widgets/Button.hpp>
+	<TGUI/Renderers/ChildWindowRenderer.hpp>
+	<limits>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\childwindowrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\combobox.hpp
+	<TGUI/Widgets/ListBox.hpp>
+	<TGUI/Renderers/ComboBoxRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\listbox.hpp
+	<TGUI/CopiedSharedPtr.hpp>
+	<TGUI/Widgets/Scrollbar.hpp>
+	<TGUI/Renderers/ListBoxRenderer.hpp>
+	<TGUI/Text.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\listboxrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\comboboxrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548353122 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\editbox.hpp
+	<TGUI/Widgets/ClickableWidget.hpp>
+	<TGUI/Renderers/EditBoxRenderer.hpp>
+	<TGUI/FloatRect.hpp>
+	<TGUI/Text.hpp>
+	<regex>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\editboxrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\group.hpp
+	<TGUI/Container.hpp>
+	<TGUI/Renderers/GroupRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\grouprenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\grid.hpp
+	<TGUI/Container.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\horizontallayout.hpp
+	<TGUI/Widgets/BoxLayoutRatios.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\boxlayoutratios.hpp
+	<TGUI/Widgets/BoxLayout.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\boxlayout.hpp
+	<TGUI/Widgets/Group.hpp>
+	<TGUI/Renderers/BoxLayoutRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\boxlayoutrenderer.hpp
+	<TGUI/Renderers/GroupRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\horizontalwrap.hpp
+	<TGUI/Widgets/BoxLayout.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\knob.hpp
+	<TGUI/Widget.hpp>
+	<TGUI/Renderers/KnobRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\knobrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\label.hpp
+	<TGUI/Widgets/ClickableWidget.hpp>
+	<TGUI/Renderers/LabelRenderer.hpp>
+	<TGUI/CopiedSharedPtr.hpp>
+	<TGUI/Widgets/Scrollbar.hpp>
+	<TGUI/Text.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\labelrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548611836 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\listview.hpp
+	<TGUI/CopiedSharedPtr.hpp>
+	<TGUI/Widgets/Scrollbar.hpp>
+	<TGUI/Renderers/ListViewRenderer.hpp>
+	<TGUI/Text.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\listviewrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\menubar.hpp
+	<TGUI/Widget.hpp>
+	<TGUI/Renderers/MenuBarRenderer.hpp>
+	<TGUI/Text.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\menubarrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\messagebox.hpp
+	<TGUI/Widgets/Label.hpp>
+	<TGUI/Widgets/Button.hpp>
+	<TGUI/Widgets/ChildWindow.hpp>
+	<TGUI/Renderers/MessageBoxRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\messageboxrenderer.hpp
+	<TGUI/Renderers/ChildWindowRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\panel.hpp
+	<TGUI/Widgets/Group.hpp>
+	<TGUI/Renderers/PanelRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\panelrenderer.hpp
+	<TGUI/Renderers/GroupRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\picture.hpp
+	<TGUI/Widgets/ClickableWidget.hpp>
+	<TGUI/Renderers/PictureRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\picturerenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\progressbar.hpp
+	<TGUI/Renderers/ProgressBarRenderer.hpp>
+	<TGUI/Widgets/ClickableWidget.hpp>
+	<TGUI/Text.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\progressbarrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\radiobuttongroup.hpp
+	<TGUI/Widgets/Group.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\rangeslider.hpp
+	<TGUI/Widget.hpp>
+	<TGUI/Renderers/RangeSliderRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\rangesliderrenderer.hpp
+	<TGUI/Renderers/SliderRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\sliderrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\scrollablepanel.hpp
+	<TGUI/CopiedSharedPtr.hpp>
+	<TGUI/Widgets/Panel.hpp>
+	<TGUI/Widgets/Scrollbar.hpp>
+	<TGUI/Renderers/ScrollablePanelRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\scrollablepanelrenderer.hpp
+	<TGUI/Renderers/PanelRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\slider.hpp
+	<TGUI/Widget.hpp>
+	<TGUI/Renderers/SliderRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\spinbutton.hpp
+	<TGUI/Renderers/SpinButtonRenderer.hpp>
+	<TGUI/Widgets/ClickableWidget.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\spinbuttonrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\tabs.hpp
+	<TGUI/Widget.hpp>
+	<TGUI/Renderers/TabsRenderer.hpp>
+	<TGUI/Text.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\tabsrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\textbox.hpp
+	<TGUI/CopiedSharedPtr.hpp>
+	<TGUI/Widgets/Scrollbar.hpp>
+	<TGUI/Renderers/TextBoxRenderer.hpp>
+	<TGUI/Text.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\textboxrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\treeview.hpp
+	<TGUI/CopiedSharedPtr.hpp>
+	<TGUI/Widgets/Scrollbar.hpp>
+	<TGUI/Renderers/TreeViewRenderer.hpp>
+	<TGUI/Text.hpp>
+
+1548611836 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\renderers\treeviewrenderer.hpp
+	<TGUI/Renderers/WidgetRenderer.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\widgets\verticallayout.hpp
+	<TGUI/Widgets/BoxLayoutRatios.hpp>
+
+1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\signalimpl.hpp
+	<TGUI/Signal.hpp>
 
