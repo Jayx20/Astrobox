@@ -81,8 +81,8 @@ int main()
         "Press / to toggle the camera following the player.\n"
         "Holding alt will let you move the camera if it is not locked. - and + Zoom.\n"
         "Press [ and ] to change asteroid size and A to spawn asteroid."
-        "\n\n\n" /*space for the size and entity count*/
-        "Tell me how many entities can lag your game, I'm curious.",freesans,20);
+        "\n\n\n\n" /*space for the size and entity count*/
+        "If you manage to lag the game, tell me.\nI'm curious about how many entities you'd need.",freesans,20);
 
     liveMessage.setPosition(0,120);
     ///player testEntity; //creates a test entity
