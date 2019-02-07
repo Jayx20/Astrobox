@@ -82,7 +82,7 @@ int main()
         "Holding alt will let you move the camera if it is not locked. - and + Zoom.\n"
         "Press [ and ] to change asteroid size and A to spawn asteroid."
         "\n\n\n\n" /*space for the size and entity count*/
-        "If you manage to lag the game, tell me.\nI'm curious about how many entities you'd need.",freesans,20);
+        "Over 1000 entities could be laggy. Just restart the game if you have too many.",freesans,20);
 
     liveMessage.setPosition(0,120);
     ///player testEntity; //creates a test entity
