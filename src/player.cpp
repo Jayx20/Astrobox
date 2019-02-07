@@ -59,6 +59,9 @@ void player::keyboardUpdate() {
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Equal)) {viewScale-=0.01f*fast;}
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Dash)) {viewScale+=0.01f*fast;}
 
+    ///fast spawning asteroid
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::A) && fast!=1) {spawningAsteroid=true;}
+
     ///Keys that toggle things
     for(int k=0;k< 3 ;k++) {
 
