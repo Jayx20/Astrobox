@@ -16,8 +16,9 @@
 
 
 
-///this is the creation of our game window.
-sf::RenderWindow window(sf::VideoMode(1920, 1080), "Astrobox");
+///this is the creation of our game window and view
+sf::RenderWindow window(sf::VideoMode(1440, 810), "Astrobox");
+sf::View view;
 
 ///stuff for the FrameCounter function
 int frames;
@@ -29,6 +30,8 @@ bool spawningAsteroid;
 bool guiOn = true;
 //bool guiSeen;
 float asteroidMass = 1.f;
+float viewX, viewY;
+float viewScale = 1;
 
 ///gui stuff
 sf::Font freesans;
@@ -71,10 +74,17 @@ int main()
 
 
     freesans = LoadFontFromResource("FREE_SANS");
-    sf::Text asteroidMassText("uninitialized",freesans,30);
-    sf::Text message("Press O to toggle ui.\nArrow keys to move, and Space to slow down.\nPress [ and ] to change asteroid size and A to spawn asteroid.",freesans,20);
+    sf::Text liveMessage("uninitialized",freesans,20);
+    sf::Text message(
+        "Press O to toggle ui.\n"
+        "Arrow keys to move, and Space to slow down.\n"
+        "Press / to toggle the camera following the player.\n"
+        "Holding alt will let you move the camera if it is not locked. - and + Zoom.\n"
+        "Press [ and ] to change asteroid size and A to spawn asteroid."
+        "\n\n\n" /*space for the size and entity count*/
+        "Tell me how many entities can lag your game, I'm curious.",freesans,20);
 
-    asteroidMassText.setPosition(100,100);
+    liveMessage.setPosition(0,120);
     ///player testEntity; //creates a test entity
     ///testEntity.setPosition(400.f,300.f);
 
@@ -104,8 +114,8 @@ int main()
                 window.close();
         }
 
-
-
+        view.reset(sf::FloatRect(viewX,viewY,window.getSize().x*viewScale,window.getSize().y*viewScale));
+        window.setView(view);
 		//
 		///here is the actual game code:
 
@@ -124,10 +134,13 @@ int main()
 
         FrameCounter(); //test frame counting stuff
 
-        asteroidMassText.setString( ("Size:"+std::to_string(asteroidMass)).erase(std::to_string(asteroidMass).length(),5) );
+
+        window.setView(window.getDefaultView());
+
+        liveMessage.setString( "Size: "+(std::to_string(asteroidMass)).erase(std::to_string(asteroidMass).length()-4,4) +"\nEntity Count: "+std::to_string(allEntities.size()));
         //the rounding fix is really stupid if somebody can make it simpler do so im just removing decimals
         if(guiOn) { //guiSeen=true;
-            window.draw(asteroidMassText);
+            window.draw(liveMessage);
             window.draw(message);
             }
         //if(!guiSeen) {window.draw(message);}
