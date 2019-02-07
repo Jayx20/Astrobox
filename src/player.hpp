@@ -20,4 +20,6 @@ class player : public entity {
         void keyboardUpdate();
         bool aPressed;
         bool oPressed;
+        float fast;
+        bool viewFollow=true;
 };

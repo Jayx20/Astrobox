@@ -77,7 +77,7 @@ int main()
     sf::Text liveMessage("uninitialized",freesans,20);
     sf::Text message(
         "Press O to toggle ui.\n"
-        "Arrow keys to move, and Space to slow down.\n"
+        "Arrow keys to move, and Space to slow down. Shift makes things faster.\n"
         "Press / to toggle the camera following the player.\n"
         "Holding alt will let you move the camera if it is not locked. - and + Zoom.\n"
         "Press [ and ] to change asteroid size and A to spawn asteroid."

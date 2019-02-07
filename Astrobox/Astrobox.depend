@@ -422,7 +422,7 @@
 1525812018 c:\users\jordan\desktop\astrobox development\astrobox\include\sfml\main.hpp
 	<SFML/Config.hpp>
 
-1549514278 source:c:\users\jordan\desktop\astrobox development\astrobox\src\player.cpp
+1549578433 source:c:\users\jordan\desktop\astrobox development\astrobox\src\player.cpp
 	"player.hpp"
 	"asteroid.hpp"
 	"iterator"
@@ -443,7 +443,7 @@
 	<vector>
 	<memory>
 
-1549512165 c:\users\jordan\desktop\astrobox development\astrobox\src\player.hpp
+1549578316 c:\users\jordan\desktop\astrobox development\astrobox\src\player.hpp
 	"entity.hpp"
 
 1548286720 c:\users\jordan\desktop\astrobox development\astrobox\src\vector2.hpp
@@ -900,7 +900,7 @@
 1548724301 c:\users\jordan\desktop\astrobox development\astrobox\src\asteroid.hpp
 	"entity.hpp"
 
-1549513926 source:c:\users\jordan\desktop\astrobox development\astrobox\main.cpp
+1549577976 source:c:\users\jordan\desktop\astrobox development\astrobox\main.cpp
 	<SFML/Window.hpp>
 	<SFML/Graphics.hpp>
 	<SFML/Main.hpp>
@@ -917,7 +917,7 @@
 1549498929 c:\users\jordan\desktop\astrobox development\astrobox\src\resource.hpp
 	<windows.h>
 
-1549498848 source:c:\users\jordan\desktop\astrobox development\astrobox\assets\resource.rc
+1549577934 source:c:\users\jordan\desktop\astrobox development\astrobox\assets\resource.rc
 
 1548178966 c:\users\jordan\desktop\astrobox development\astrobox\include\tgui\tgui.hpp
 	<TGUI/Clipboard.hpp>

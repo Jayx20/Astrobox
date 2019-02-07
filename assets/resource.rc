@@ -2,3 +2,4 @@
 
 IMG_SPRITES RCDATA "spritesheet.png"
 FREE_SANS RCDATA "FreeSans.ttf"
+MAINICON ICON "player.ico"
