@@ -26,7 +26,8 @@ int secondsPassed;
 
 ///global variables to use along with player
 bool spawningAsteroid;
-bool guiOn, guiSeen;
+bool guiOn = true;
+//bool guiSeen;
 float asteroidMass = 1.f;
 
 ///gui stuff
@@ -71,7 +72,7 @@ int main()
 
     freesans = LoadFontFromResource("FREE_SANS");
     sf::Text asteroidMassText("uninitialized",freesans,30);
-    sf::Text message("Press O to toggle ui.\nPress [ and ] to change asteroid size.",freesans,20);
+    sf::Text message("Press O to toggle ui.\nArrow keys to move, and Space to slow down.\nPress [ and ] to change asteroid size and A to spawn asteroid.",freesans,20);
 
     asteroidMassText.setPosition(100,100);
     ///player testEntity; //creates a test entity
@@ -125,10 +126,11 @@ int main()
 
         asteroidMassText.setString( ("Size:"+std::to_string(asteroidMass)).erase(std::to_string(asteroidMass).length(),5) );
         //the rounding fix is really stupid if somebody can make it simpler do so im just removing decimals
-        if(guiOn) { guiSeen=true;
+        if(guiOn) { //guiSeen=true;
             window.draw(asteroidMassText);
+            window.draw(message);
             }
-        if(!guiSeen) {window.draw(message);}
+        //if(!guiSeen) {window.draw(message);}
 
         window.display(); ///updates the whole window
 
