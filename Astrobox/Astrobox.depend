@@ -422,7 +422,7 @@
 1525812018 c:\users\jordan\desktop\astrobox development\astrobox\include\sfml\main.hpp
 	<SFML/Config.hpp>
 
-1549512533 source:c:\users\jordan\desktop\astrobox development\astrobox\src\player.cpp
+1549514278 source:c:\users\jordan\desktop\astrobox development\astrobox\src\player.cpp
 	"player.hpp"
 	"asteroid.hpp"
 	"iterator"
@@ -433,7 +433,7 @@
 1548198344 c:\users\jordan\desktop\astrobox development\astrobox\src\entity.h
 	<SFML/Graphics.hpp>
 
-1548727551 source:c:\users\jordan\desktop\astrobox development\astrobox\src\entity.cpp
+1549577233 source:c:\users\jordan\desktop\astrobox development\astrobox\src\entity.cpp
 	"entity.hpp"
 	<cmath>
 
