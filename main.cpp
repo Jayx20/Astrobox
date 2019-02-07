@@ -4,6 +4,9 @@
 #include <SFML/System.hpp>
 #include <vector>
 #include <memory>
+#include <string>
+#include <cmath>
+
 
 
 #include "src/player.hpp"
@@ -23,7 +26,7 @@ int secondsPassed;
 
 ///global variables to use along with player
 bool spawningAsteroid;
-bool guiOn;
+bool guiOn, guiSeen;
 float asteroidMass = 1.f;
 
 ///gui stuff
@@ -66,8 +69,9 @@ int main()
     SPRITE_SHEET.loadFromImage(LoadImageFromResource("IMG_SPRITES"));  ///loads the sprite sheet into SPRITE_SHEET
 
 
-    freesans.loadFromFile("FreeSans.ttf");
+    freesans = LoadFontFromResource("FREE_SANS");
     sf::Text asteroidMassText("uninitialized",freesans,30);
+    sf::Text message("Press O to toggle ui.\nPress [ and ] to change asteroid size.",freesans,20);
 
     asteroidMassText.setPosition(100,100);
     ///player testEntity; //creates a test entity
@@ -119,9 +123,12 @@ int main()
 
         FrameCounter(); //test frame counting stuff
 
-        if(guiOn) {
+        asteroidMassText.setString( ("Size:"+std::to_string(asteroidMass)).erase(std::to_string(asteroidMass).length(),5) );
+        //the rounding fix is really stupid if somebody can make it simpler do so im just removing decimals
+        if(guiOn) { guiSeen=true;
             window.draw(asteroidMassText);
             }
+        if(!guiSeen) {window.draw(message);}
 
         window.display(); ///updates the whole window
 
